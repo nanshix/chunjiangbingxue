@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>春江冰雪世界</title>
+    <title>春江冰雪乐园</title>
     <style>
         /* Background gradient (ice theme) */
         * {
@@ -307,8 +307,8 @@
 
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
         }
 
         .feature-card {
@@ -346,9 +346,23 @@
         }
 
         .feature-icon {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .feature-icon svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .feature-icon svg image {
+            width: 100%;
+            height: 100%;
         }
 
         .feature-card h3 {
@@ -594,19 +608,81 @@
         </div>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="feature-icon">⛸️</div>
+                <div class="feature-icon">
+                    <img src="assets/pictures/ice-skating.svg" alt="冰上乐园">
+                </div>
                 <h3>冰上乐园</h3>
                 <p>1800平方米专业冰场，国际级制冰设备，让您在冰面上自由飞舞</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🎿</div>
+                <div class="feature-icon">
+                    <img src="assets/pictures/sledding.svg" alt="雪圈滑道">
+                </div>
                 <h3>雪圈滑道</h3>
                 <p>50米高空滑道，感受风驰电掣的刺激，体验速度与激情</p>
             </div>
             <div class="feature-card">
-                <div class="feature-icon">🏛️</div>
-                <h3>冰雕艺术</h3>
-                <p>大师级冰雕作品，冰雪城堡，让您置身童话世界</p>
+                <div class="feature-icon">
+                    <img src="assets/pictures/snowmen.svg" alt="雪人制作">
+                </div>
+                <h3>雪人制作</h3>
+                <p>专业雪人制作教学，为您打造独一无二的雪人朋友</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/snowball-fight.svg" alt="雪球大战">
+                </div>
+                <h3>雪球大战</h3>
+                <p>安全有趣的大雪仗区域，释放您的童真与活力</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/skiing.svg" alt="滑雪">
+                </div>
+                <h3>滑雪运动</h3>
+                <p>多条滑雪道满足不同水平需求，专业教练全程指导</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/snowboarding.svg" alt="单板滑雪">
+                </div>
+                <h3>单板滑雪</h3>
+                <p>时尚的单板滑雪体验，挑战极限，展现风采</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/snow-forts.svg" alt="雪堡建造">
+                </div>
+                <h3>雪堡建造</h3>
+                <p>专业雪堡建造工具，建造您的冰雪王国</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/snow-angels.svg" alt="天使印记">
+                </div>
+                <h3>天使印记</h3>
+                <p>在雪地上创造美丽的天使印记，留下难忘回忆</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/ice-fishing.svg" alt="冰钓">
+                </div>
+                <h3>冰钓体验</h3>
+                <p>专业冰钓设备，在冰面上享受垂钓乐趣</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/snowshoeing.svg" alt="雪鞋行走">
+                </div>
+                <h3>雪鞋行走</h3>
+                <p>穿上专业雪鞋，漫步雪地，感受北国风光</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <img src="assets/pictures/curling.svg" alt="冰壶">
+                </div>
+                <h3>冰壶运动</h3>
+                <p>优雅的冰壶运动，锻炼策略与技巧</p>
             </div>
         </div>
     </section>
@@ -619,39 +695,39 @@
         </div>
         <div class="gallery-grid">
             <div class="gallery-item">
-                <img src="assets/pictures/gallery/ice-skating.jpg" alt="冰上运动">
+                <img src="assets/pictures/ice-skating.svg" alt="冰上运动">
                 <div class="gallery-overlay">
                     <h4>冰上舞蹈</h4>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/pictures/gallery/snow-tubing.jpg" alt="雪圈滑道">
+                <img src="assets/pictures/sledding.svg" alt="雪圈滑道">
                 <div class="gallery-overlay">
                     <h4>极速滑行</h4>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/pictures/gallery/ice-sculptures.jpg" alt="冰雕展览">
+                <img src="assets/pictures/snowball-fight.svg" alt="雪球大战">
                 <div class="gallery-overlay">
-                    <h4>冰雪艺术</h4>
+                    <h4>雪球激战</h4>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/pictures/gallery/family-fun.jpg" alt="家庭欢乐">
+                <img src="assets/pictures/skiing.svg" alt="滑雪运动">
                 <div class="gallery-overlay">
-                    <h4>温馨时光</h4>
+                    <h4>雪山飞驰</h4>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/pictures/gallery/night-view.jpg" alt="夜景">
+                <img src="assets/pictures/snowboarding.svg" alt="单板滑雪">
                 <div class="gallery-overlay">
-                    <h4>梦幻夜景</h4>
+                    <h4>板舞飞扬</h4>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="assets/pictures/gallery/cafe.jpg" alt="咖啡厅">
+                <img src="assets/pictures/curling.svg" alt="冰壶运动">
                 <div class="gallery-overlay">
-                    <h4>暖屋咖啡</h4>
+                    <h4>冰壶优雅</h4>
                 </div>
             </div>
         </div>
@@ -660,15 +736,15 @@
     <!-- Footer -->
     <footer id="contact">
         <div class="footer-content">
-            <h2>春江冰雪世界</h2>
-            <p>地址：哈尔滨市尚志市亚布力镇</p>
-            <p>电话：0451-12345678</p>
+            <h2>春江冰雪乐园</h2>
+            <p>地址：哈尔滨市尚志市春江渔场</p>
+            <p>电话：13684559897</p>
             <div class="social-links">
                 <a href="#">📱</a>
                 <a href="#">📸</a>
                 <a href="#">💬</a>
             </div>
-            <p style="margin-top: 20px; opacity: 0.7;">© 2024 春江冰雪世界. 保留所有权利.</p>
+            <p style="margin-top: 20px; opacity: 0.7;">© 2024 春江渔场. 保留所有权利.</p>
         </div>
     </footer>
 

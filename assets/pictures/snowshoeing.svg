@@ -1,0 +1,82 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Snow-covered ground -->
+  <rect x="0" y="250" width="400" height="50" fill="#fff"/>
+
+  <!-- Snowshoer -->
+  <g transform="translate(150, 200)">
+    <!-- Body -->
+    <rect x="-10" y="0" width="20" height="30" fill="#00897b"/>
+    <!-- Head -->
+    <circle cx="0" cy="-15" r="10" fill="#ffdbac"/>
+    <!-- Backpack -->
+    <rect x="-8" y="-5" width="16" height="15" fill="#424242" rx="2"/>
+    <!-- Arms -->
+    <line x1="-10" y1="5" x2="-25" y2="10" stroke="#ffdbac" stroke-width="4" stroke-linecap="round"/>
+    <line x1="10" y1="5" x2="25" y2="10" stroke="#ffdbac" stroke-width="4" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="-5" y1="30" x2="-8" y2="50" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+    <line x1="5" y1="30" x2="8" y2="50" stroke="#333" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Snowshoes -->
+    <ellipse cx="-12" cy="50" rx="18" ry="8" fill="#8d6e63">
+      <animate attributeName="ry" values="8;10;8" dur="1s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="12" cy="50" rx="18" ry="8" fill="#8d6e63">
+      <animate attributeName="ry" values="8;10;8" dur="1s" begin="0.5s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Walking motion -->
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 200,-30; 400,-20"
+      dur="8s" repeatCount="indefinite"/>
+    <animateTransform attributeName="transform" type="rotate"
+      values="0; -5; 0"
+      dur="2s" repeatCount="indefinite" additive="sum"/>
+  </g>
+
+  <!-- Snow spray -->
+  <g opacity="0.5">
+    <circle cx="180" cy="240" r="2" fill="#fff">
+      <animate attributeName="cy" values="240;260;240" dur="0.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="235" r="2" fill="#fff">
+      <animate attributeName="cy" values="235;255;235" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="260" cy="238" r="2" fill="#fff">
+      <animate attributeName="cy" values="238;258;238" dur="0.9s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Snowshoe tracks -->
+  <g stroke="#f0f0f0" stroke-width="2" fill="none" opacity="0.7">
+    <path d="M 150 250 Q 180 240 220 245 T 300 250">
+      <animate attributeName="opacity" values="0;0.5;0" dur="8s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Trees in background -->
+  <g opacity="0.7">
+    <polygon points="80,240 75,270 85,270" fill="#66bb6a"/>
+    <polygon points="320,230 315,265 325,265" fill="#81c784"/>
+    <polygon points="340,250 335,280 345,280" fill="#4caf50"/>
+  </g>
+
+  <!-- Snowflakes -->
+  <g opacity="0.6">
+    <circle cx="100" cy="50" r="2" fill="#fff">
+      <animate attributeName="cy" values="50;300" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="0" r="2" fill="#fff">
+      <animate attributeName="cy" values="0;300" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="300" cy="80" r="2" fill="#fff">
+      <animate attributeName="cy" values="80;330" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Backpack contents falling -->
+  <circle cx="350" cy="220" r="1" fill="#ffeb3b">
+    <animate attributeName="cy" values="220;250;220" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+  </circle>
+</svg>

@@ -1,0 +1,29 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hill -->
+  <path d="M 0 300 Q 100 200 200 150 T 400 100 L 400 300 Z" fill="#f0f0f0" />
+
+  <!-- Snow tracks -->
+  <path d="M 0 300 Q 100 200 200 150 T 400 100" stroke="#fff" stroke-width="3" fill="none" opacity="0.5"/>
+
+  <!-- Sled -->
+  <g transform="translate(100, 250)">
+    <!-- Sled body -->
+    <rect x="0" y="0" width="60" height="20" rx="5" fill="#d32f2f">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 250,-150; 0,-150"
+        dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Runners -->
+    <rect x="5" y="20" width="50" height="5" fill="#333">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 250,-150; 0,-150"
+        dur="5s" repeatCount="indefinite"/>
+    </rect>
+    <!-- Person -->
+    <circle cx="30" cy="-15" r="10" fill="#ffdbac">
+      <animateTransform attributeName="transform" type="translate"
+        values="0,0; 250,-150; 0,-150"
+        dur="5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

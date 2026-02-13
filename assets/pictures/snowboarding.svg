@@ -1,0 +1,63 @@
+<svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Mountain slope -->
+  <path d="M 0 300 L 200 80 L 400 300 Z" fill="#fafafa"/>
+
+  <!-- Snowboarder -->
+  <g transform="translate(180, 150)">
+    <!-- Body - sideways position -->
+    <ellipse cx="0" cy="0" rx="20" ry="10" fill="#9c27b0" transform="rotate(-30)"/>
+    <!-- Head -->
+    <circle cx="-15" cy="-5" r="8" fill="#ffdbac"/>
+    <!-- Helmet -->
+    <circle cx="-15" cy="-5" r="10" fill="none" stroke="#f44336" stroke-width="2"/>
+    <!-- Arms -->
+    <line x1="10" y1="-3" x2="20" y2="-10" stroke="#ffdbac" stroke-width="3" stroke-linecap="round"/>
+    <line x1="10" y1="-3" x2="20" y2="5" stroke="#ffdbac" stroke-width="3" stroke-linecap="round"/>
+    <!-- Legs -->
+    <line x1="15" y1="5" x2="20" y2="15" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+    <line x1="15" y1="5" x2="20" y2="10" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Snowboard -->
+    <rect x="-30" y="10" width="60" height="5" rx="2" fill="#ff5722" transform="rotate(-30)"/>
+
+    <!-- Motion trail -->
+    <g opacity="0.3">
+      <ellipse cx="-40" cy="20" rx="25" ry="8" fill="#fff" transform="rotate(-30)">
+        <animate attributeName="opacity" values="0;0.5;0" dur="2s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="-60" cy="35" rx="30" ry="10" fill="#fff" transform="rotate(-30)">
+        <animate attributeName="opacity" values="0;0.5;0" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- Snowboarder movement -->
+    <animateTransform attributeName="transform" type="translate"
+      values="0,0; 150,120; 200,180"
+      dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Jumping snow spray -->
+  <g opacity="0.7">
+    <circle cx="200" cy="150" r="4" fill="#fff">
+      <animate attributeName="cy" values="150;130;150" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="160" r="3" fill="#fff">
+      <animate attributeName="cy" values="160;140;160" dur="1.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="180" cy="155" r="3" fill="#fff">
+      <animate attributeName="cy" values="155;135;155" dur="0.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Trees -->
+  <g>
+    <polygon points="80,240 70,270 90,270" fill="#4caf50"/>
+    <rect x="78" y="270" width="4" height="10" fill="#795548"/>
+
+    <polygon points="320,200 310,240 330,240" fill="#66bb6a"/>
+    <rect x="318" y="240" width="4" height="10" fill="#795548"/>
+  </g>
+
+  <!-- Half-pipe -->
+  <path d="M 50 300 Q 200 200 350 300" stroke="#fff" stroke-width="20" fill="none" opacity="0.3"/>
+</svg>
