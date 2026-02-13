@@ -3,13 +3,15 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    navToggle.classList.toggle('active');
+    menuToggle.classList.toggle('active');
 });
 
 // Close mobile menu when clicking a link
 navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
         navLinks.classList.remove('active');
+        menuToggle.classList.remove('active');
     });
 });
 
@@ -78,6 +80,40 @@ document.querySelectorAll('img').forEach(img => {
     });
     img.style.opacity = '0';
     img.style.transition = 'opacity 0.3s ease';
+});
+
+// Create animated snowflakes
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.innerHTML = '❄';
+    snowflake.style.left = Math.random() * window.innerWidth + 'px';
+    snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+    snowflake.style.opacity = Math.random();
+    snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+
+    document.body.appendChild(snowflake);
+
+    setTimeout(() => {
+        snowflake.remove();
+    }, 5000);
+}
+
+// Create snowflakes periodically
+setInterval(createSnowflake, 300);
+
+// Add neon glow to text elements
+document.querySelectorAll('h1, h2').forEach(element => {
+    if (element.classList.contains('neon-text')) return;
+    element.classList.add('neon-text');
+});
+
+// Add pulse effect to buttons
+document.querySelectorAll('.btn-primary, .btn-secondary').forEach(button => {
+    button.classList.add('pulse');
+    setInterval(() => {
+        button.classList.toggle('pulse');
+    }, 3000);
 });
 
 // Contact form validation (if present)
