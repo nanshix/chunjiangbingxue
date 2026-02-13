@@ -6,25 +6,16 @@
     <title>春江冰雪乐园</title>
     <style>
         /* Background gradient (ice theme) */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
+            margin: 0;
             height: 100vh;
-            overflow-x: hidden;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-            /* Beautiful ice gradient background */
+            overflow: hidden;
+            font-family: Arial, sans-serif;
             background:
-                radial-gradient(circle at 20% 30%, #9be7ff, transparent),
-                radial-gradient(circle at 80% 70%, #7b61ff, transparent),
-                linear-gradient(#0b3d91, #001a33);
-
+                radial-gradient(circle at 20% 30%, #9be7ff33, transparent 40%),
+                radial-gradient(circle at 80% 70%, #7b61ff33, transparent 40%),
+                linear-gradient(to bottom, #0b3d91, #001a33);
             color: white;
-            position: relative;
         }
 
         /* Ice crystal glow effect */
@@ -42,52 +33,30 @@
             z-index: 1;
         }
 
-        /* Animated falling snowflakes */
+        /* Simple snowflake animation */
+        .snowflakes {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
         .snowflake {
             position: absolute;
-            color: rgba(255, 255, 255, 0.8);
-            user-select: none;
-            pointer-events: none;
-            animation-name: snowflakes-fall;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
+            top: -20px;
+            color: #c8eeff;
+            font-size: 1.2em;
+            opacity: 0.7;
+            animation: fall linear infinite;
         }
 
-        @keyframes snowflakes-fall {
-            0% {
-                transform: translateY(-100vh) rotate(0deg);
-            }
-            100% {
-                transform: translateY(100vh) rotate(360deg);
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+                opacity: 0;
             }
         }
-
-        @keyframes snowflakes-shake {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(80px); }
-        }
-
-        /* Multiple snowflake sizes and speeds */
-        .snowflake:nth-child(1) { left: 1%; animation-duration: 10s; animation-delay: 0s; font-size: 10px; opacity: 0.6; }
-        .snowflake:nth-child(2) { left: 10%; animation-duration: 12s; animation-delay: 1s; font-size: 15px; opacity: 0.8; }
-        .snowflake:nth-child(3) { left: 20%; animation-duration: 8s; animation-delay: 2s; font-size: 20px; opacity: 0.7; }
-        .snowflake:nth-child(4) { left: 30%; animation-duration: 15s; animation-delay: 0s; font-size: 12px; opacity: 0.9; }
-        .snowflake:nth-child(5) { left: 40%; animation-duration: 10s; animation-delay: 3s; font-size: 18px; opacity: 0.6; }
-        .snowflake:nth-child(6) { left: 50%; animation-duration: 12s; animation-delay: 2s; font-size: 14px; opacity: 0.8; }
-        .snowflake:nth-child(7) { left: 60%; animation-duration: 14s; animation-delay: 1s; font-size: 16px; opacity: 0.7; }
-        .snowflake:nth-child(8) { left: 70%; animation-duration: 11s; animation-delay: 4s; font-size: 13px; opacity: 0.9; }
-        .snowflake:nth-child(9) { left: 80%; animation-duration: 13s; animation-delay: 2s; font-size: 17px; opacity: 0.6; }
-        .snowflake:nth-child(10) { left: 90%; animation-duration: 9s; animation-delay: 0s; font-size: 11px; opacity: 0.8; }
-        .snowflake:nth-child(11) { left: 5%; animation-duration: 16s; animation-delay: 5s; font-size: 19px; opacity: 0.7; animation-name: snowflakes-fall, snowflakes-shake; }
-        .snowflake:nth-child(12) { left: 15%; animation-duration: 11s; animation-delay: 3s; font-size: 21px; opacity: 0.8; }
-        .snowflake:nth-child(13) { left: 25%; animation-duration: 14s; animation-delay: 1s; font-size: 12px; opacity: 0.6; }
-        .snowflake:nth-child(14) { left: 35%; animation-duration: 10s; animation-delay: 4s; font-size: 18px; opacity: 0.9; }
-        .snowflake:nth-child(15) { left: 45%; animation-duration: 13s; animation-delay: 2s; font-size: 15px; opacity: 0.7; }
-        .snowflake:nth-child(16) { left: 55%; animation-duration: 12s; animation-delay: 0s; font-size: 20px; opacity: 0.8; }
-        .snowflake:nth-child(17) { left: 65%; animation-duration: 15s; animation-delay: 3s; font-size: 14px; opacity: 0.6; }
-        .snowflake:nth-child(18) { left: 75%; animation-duration: 11s; animation-delay: 1s; font-size: 16px; opacity: 0.9; }
-        .snowflake:nth-child(19) { left: 85%; animation-duration: 14s; animation-delay: 2s; font-size: 13px; opacity: 0.7; }
-        .snowflake:nth-child(20) { left: 95%; animation-duration: 10s; animation-delay: 5s; font-size: 17px; opacity: 0.8; }
 
         /* Navigation */
         nav {
@@ -546,27 +515,8 @@
         <div class="ice-loader"></div>
     </div>
 
-    <!-- Animated Falling Snowflakes -->
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div>
-    <div class="snowflake">❄</div>
-    <div class="snowflake">❅</div>
+    <!-- Snowflakes Container -->
+    <div class="snowflakes" id="snowflakes"></div>
 
     <!-- Navigation -->
     <nav>
@@ -749,6 +699,21 @@
     </footer>
 
     <script>
+        // Generate snowflakes
+        const container = document.getElementById('snowflakes');
+        const count = 40;
+        for (let i = 0; i < count; i++) {
+            const flake = document.createElement('div');
+            flake.classList.add('snowflake');
+            flake.textContent = ['❄', '❅', '❆', '·', '*'][Math.floor(Math.random() * 5)];
+            flake.style.left = Math.random() * 100 + 'vw';
+            flake.style.fontSize = (0.8 + Math.random() * 1.5) + 'em';
+            flake.style.animationDuration = (4 + Math.random() * 8) + 's';
+            flake.style.animationDelay = (Math.random() * 8) + 's';
+            flake.style.opacity = 0.3 + Math.random() * 0.7;
+            container.appendChild(flake);
+        }
+
         // Hide loading screen
         window.addEventListener('load', () => {
             setTimeout(() => {
