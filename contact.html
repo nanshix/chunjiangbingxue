@@ -227,20 +227,57 @@
         <p>关注我们的社交媒体账号，获取最新活动信息和优惠</p>
       </div>
       
-      <div class="hero-cta" style="justify-content: center;">
-        <a href="#" class="btn btn-primary" onclick="event.preventDefault(); showNotification('微信公众号：春江冰雪乐园', 'info')">
-          <span>📱</span>
-          <span>微信公众号</span>
-        </a>
-        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('微博：@春江冰雪乐园', 'info')">
-          <span>📝</span>
-          <span>官方微博</span>
-        </a>
-        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('抖音：春江冰雪乐园', 'info')">
-          <span>🎵</span>
-          <span>抖音账号</span>
-        </a>
+      <div class="social-platforms" style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem;">
+        <!-- WeChat -->
+        <div class="social-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(125, 211, 252, 0.2); border-radius: 20px; padding: 2.5rem; min-width: 220px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onclick="showNotification('微信公众号：春江冰雪乐园', 'info')">
+          <div class="social-icon" style="font-size: 3.5rem; margin-bottom: 1rem; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">💬</div>
+          <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">微信公众平台</h3>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">扫码关注公众号</p>
+        </div>
+        
+        <!-- Douyin -->
+        <div class="social-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(125, 211, 252, 0.2); border-radius: 20px; padding: 2.5rem; min-width: 220px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onclick="showNotification('抖音号：春江冰雪乐园', 'info')">
+          <div class="social-icon" style="font-size: 3.5rem; margin-bottom: 1rem; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">🎵</div>
+          <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">抖音官方账号</h3>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">观看精彩短视频</p>
+        </div>
+        
+        <!-- Xiaohongshu -->
+        <div class="social-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(125, 211, 252, 0.2); border-radius: 20px; padding: 2.5rem; min-width: 220px; transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;" onclick="showNotification('小红书：春江冰雪乐园', 'info')">
+          <div class="social-icon" style="font-size: 3.5rem; margin-bottom: 1rem; transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);">📕</div>
+          <h3 style="color: white; margin-bottom: 0.5rem; font-size: 1.25rem;">小红书分享</h3>
+          <p style="color: rgba(255,255,255,0.6); font-size: 0.9rem;">查看游玩攻略</p>
+        </div>
       </div>
+      
+      <style>
+        .social-card:hover {
+          transform: translateY(-10px) scale(1.02) !important;
+          background: rgba(255,255,255,0.1) !important;
+          border-color: rgba(125, 211, 252, 0.5) !important;
+          box-shadow: 0 20px 40px rgba(14, 165, 233, 0.3) !important;
+        }
+        .social-card:hover .social-icon {
+          transform: scale(1.2) rotate(5deg) !important;
+        }
+        .social-card {
+          opacity: 0;
+          animation: fadeInUp 0.6s ease forwards;
+        }
+        .social-card:nth-child(1) { animation-delay: 0.1s; }
+        .social-card:nth-child(2) { animation-delay: 0.2s; }
+        .social-card:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes fadeInUp {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      </style>
     </div>
   </section>
 
@@ -250,12 +287,8 @@
       <div class="footer-section">
         <h4>春江冰雪乐园</h4>
         <p>哈尔滨尚志市最具影响力的冰雪主题乐园，为游客提供专业、安全、欢乐的冰雪体验。</p>
-        <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem;">关注我们</h4>
-        <a href="#"><span style="margin-right: 0.5rem;">💬</span>微信公众平台</a>
-        <a href="#"><span style="margin-right: 0.5rem;">🎵</span>抖音官方账号</a>
-        <a href="#"><span style="margin-right: 0.5rem;">📕</span>小红书分享</a>
-        </div>
-      
+      </div>
+
       <div class="footer-section">
         <h4>快速链接</h4>
         <a href="about.html">关于乐园</a>
@@ -263,7 +296,7 @@
         <a href="tickets.html">门票预订</a>
         <a href="contact.html">联系我们</a>
       </div>
-      
+
       <div class="footer-section">
         <h4>联系方式</h4>
         <p>📍 黑龙江省哈尔滨市尚志市</p>
@@ -271,13 +304,20 @@
         <p>✉️ info@chunjiangbingxue.com</p>
         <p>🕐 每日 9:00 - 21:00</p>
       </div>
-      
+
       <div class="footer-section">
         <h4>游客服务</h4>
         <a href="#">常见问题</a>
         <a href="#">安全须知</a>
         <a href="#">交通指南</a>
         <a href="#">隐私政策</a>
+      </div>
+
+      <div class="footer-section">
+        <h4>关注我们</h4>
+        <a href="#"><span style="margin-right: 0.5rem;">💬</span>微信公众平台</a>
+        <a href="#"><span style="margin-right: 0.5rem;">🎵</span>抖音官方账号</a>
+        <a href="#"><span style="margin-right: 0.5rem;">📕</span>小红书分享</a>
       </div>
     </div>
     

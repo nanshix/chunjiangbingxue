@@ -287,19 +287,20 @@ body {
 /* Hero Title - 冰雪奇境 */
 .hero-title {
   font-family: 'Noto Serif SC', serif;
-  font-size: clamp(5rem, 20vw, 14rem);
+  font-size: clamp(6rem, 22vw, 18rem);
   font-weight: 900;
-  background: linear-gradient(to bottom, #fff 20%, #7dd3fc 50%, #0ea5e9 100%);
+  background: linear-gradient(to bottom, #fff 10%, #7dd3fc 40%, #0ea5e9 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.5));
   margin-bottom: 2rem;
   line-height: 1;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.2em;
   animation: fadeInUp 1.2s ease;
   width: 100%;
   text-align: center;
+  margin-top: -2rem;
 }
 
 @keyframes fadeInUp {
