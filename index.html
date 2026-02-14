@@ -108,7 +108,7 @@
     </div>
   </section>
 
-  <!-- Activities Preview Section -->
+  <!-- Live Animations Section -->
   <section class="section">
     <div class="section-header">
       <span class="section-tag">精彩项目</span>
@@ -116,7 +116,33 @@
       <p>精心设计的冰雪活动，带给您刺激与欢乐并存的体验</p>
     </div>
     
-    <div class="activities-grid">
+    <!-- Animation Tabs -->
+    <div class="activity-tabs" style="margin-bottom: 2rem;">
+      <button class="tab-btn active" onclick="showAnimation('snowman')">⛄ 雪人制作</button>
+      <button class="tab-btn" onclick="showAnimation('ice')">⛸️ 冰上乐园</button>
+      <button class="tab-btn" onclick="showAnimation('tube')">🛷 雪圈滑道</button>
+    </div>
+    
+    <!-- Animation Display -->
+    <div class="container">
+      <!-- Snowman Animation -->
+      <div id="anim-snowman" class="animation-wrapper active" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3);">
+        <iframe src="activities/snowman-making.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+      </div>
+      
+      <!-- Ice Paradise Animation -->
+      <div id="anim-ice" class="animation-wrapper" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); display: none;">
+        <iframe src="activities/ice-paradise-animation.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+      </div>
+      
+      <!-- Snow Tube Animation -->
+      <div id="anim-tube" class="animation-wrapper" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); display: none;">
+        <iframe src="activities/snow-tube-slide.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+      </div>
+    </div>
+    
+    <!-- Activity Cards Below -->
+    <div class="activities-grid" style="margin-top: 3rem;">
       <div class="activity-card">
         <div class="activity-preview">
           ⛄
@@ -167,6 +193,24 @@
       </a>
     </div>
   </section>
+  
+  <script>
+    function showAnimation(type) {
+      // Hide all animations
+      document.querySelectorAll('.animation-wrapper').forEach(el => {
+        el.style.display = 'none';
+      });
+      
+      // Show selected animation
+      document.getElementById('anim-' + type).style.display = 'block';
+      
+      // Update button states
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      event.target.classList.add('active');
+    }
+  </script>
 
   <!-- Stats Section -->
   <section class="section">
