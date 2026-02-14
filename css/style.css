@@ -997,3 +997,235 @@ body {
   background: rgba(14, 165, 233, 0.3);
   color: white;
 }
+
+/* ============================================
+   SMOOTH HOVER EFFECTS - 平滑位移 & 淡入效果
+   ============================================ */
+
+/* Activity Cards - 平滑位移效果 */
+.activity-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.activity-card:hover {
+  transform: translateY(-15px) scale(1.02) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4), 0 0 40px rgba(125, 211, 252, 0.3) !important;
+}
+
+.activity-card .activity-preview {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.activity-card:hover .activity-preview {
+  transform: scale(1.1);
+}
+
+/* Feature Items - 悬停缩进效果 */
+.feature-item {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px) translateX(5px);
+  border-color: rgba(125, 211, 252, 0.6);
+  box-shadow: -5px 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.feature-item:hover::before {
+  opacity: 1;
+}
+
+.feature-item .feature-icon {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Navigation Links - 平滑下划线 */
+.nav-links a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-links a::after {
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Buttons - 弹性缩放 */
+.btn {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.6s ease;
+}
+
+.btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.btn:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* Gallery Items - 淡入放大 */
+.gallery-item {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.gallery-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.gallery-item .gallery-placeholder {
+  transition: all 0.4s ease;
+}
+
+.gallery-item:hover .gallery-placeholder {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+/* Pricing Cards - 3D 悬浮效果 */
+.pricing-card {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.pricing-card:hover {
+  transform: translateY(-15px) rotateX(5deg);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.05) translateY(-15px) rotateX(5deg);
+}
+
+/* Footer Links - 位移高亮 */
+.footer-section a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+}
+
+.footer-section a:hover {
+  color: var(--ice-blue);
+  transform: translateX(8px);
+}
+
+/* Social Links - 弹性动画 */
+.social-links a {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.2);
+  background: var(--accent);
+}
+
+/* Form Inputs - 聚焦光晕 */
+.form-group input,
+.form-group textarea {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(14, 165, 233, 0.3);
+}
+
+/* Logo Pulse Animation */
+.logo-icon {
+  animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Tab Buttons - 平滑切换 */
+.tab-btn {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.tab-btn:hover::before {
+  left: 100%;
+}
+
+/* 页面加载淡入效果 */
+.section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: sectionFadeIn 0.8s ease forwards;
+}
+
+.section:nth-child(1) { animation-delay: 0.1s; }
+.section:nth-child(2) { animation-delay: 0.2s; }
+.section:nth-child(3) { animation-delay: 0.3s; }
+.section:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes sectionFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Stats Counter - 数字跳动效果 */
+.stat-number {
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+  transform: scale(1.1);
+  color: white;
+  text-shadow: 0 0 20px rgba(125, 211, 252, 0.8);
+}
