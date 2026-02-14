@@ -116,33 +116,42 @@
       <p>精心设计的冰雪活动，带给您刺激与欢乐并存的体验</p>
     </div>
     
-    <!-- Animation Tabs -->
-    <div class="activity-tabs" style="margin-bottom: 2rem;">
-      <button class="tab-btn active" onclick="showAnimation('snowman')">⛄ 雪人制作</button>
-      <button class="tab-btn" onclick="showAnimation('ice')">⛸️ 冰上乐园</button>
-      <button class="tab-btn" onclick="showAnimation('tube')">🛷 雪圈滑道</button>
-    </div>
-    
-    <!-- Animation Display -->
+    <!-- All Animations Display -->
     <div class="container">
-      <!-- Snowman Animation -->
-      <div id="anim-snowman" class="animation-wrapper active" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3);">
-        <iframe src="activities/snowman-making.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
-      </div>
-      
-      <!-- Ice Paradise Animation -->
-      <div id="anim-ice" class="animation-wrapper" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); display: none;">
-        <iframe src="activities/ice-paradise-animation.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
-      </div>
-      
-      <!-- Snow Tube Animation -->
-      <div id="anim-tube" class="animation-wrapper" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); display: none;">
-        <iframe src="activities/snow-tube-slide.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+      <div class="animations-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+        
+        <!-- Snowman Animation -->
+        <div class="animation-card" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+          <div style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(99, 102, 241, 0.3)); padding: 1rem; text-align: center; border-bottom: 1px solid rgba(125, 211, 252, 0.3);">
+            <span style="font-size: 1.5rem; margin-right: 0.5rem;">⛄</span>
+            <span style="color: white; font-weight: 600; font-family: 'Noto Serif SC', serif;">雪人制作</span>
+          </div>
+          <iframe src="activities/snowman-making.html" style="width: 100%; height: 380px; border: none; display: block;"></iframe>
+        </div>
+        
+        <!-- Ice Paradise Animation -->
+        <div class="animation-card" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+          <div style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(99, 102, 241, 0.3)); padding: 1rem; text-align: center; border-bottom: 1px solid rgba(125, 211, 252, 0.3);">
+            <span style="font-size: 1.5rem; margin-right: 0.5rem;">⛸️</span>
+            <span style="color: white; font-weight: 600; font-family: 'Noto Serif SC', serif;">冰上乐园</span>
+          </div>
+          <iframe src="activities/ice-paradise-animation.html" style="width: 100%; height: 380px; border: none; display: block;"></iframe>
+        </div>
+        
+        <!-- Snow Tube Animation -->
+        <div class="animation-card" style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3);">
+          <div style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.3), rgba(99, 102, 241, 0.3)); padding: 1rem; text-align: center; border-bottom: 1px solid rgba(125, 211, 252, 0.3);">
+            <span style="font-size: 1.5rem; margin-right: 0.5rem;">🛷</span>
+            <span style="color: white; font-weight: 600; font-family: 'Noto Serif SC', serif;">雪圈滑道</span>
+          </div>
+          <iframe src="activities/snow-tube-slide.html" style="width: 100%; height: 380px; border: none; display: block;"></iframe>
+        </div>
+        
       </div>
     </div>
     
     <!-- Activity Cards Below -->
-    <div class="activities-grid" style="margin-top: 3rem;">
+    <div class="activities-grid" style="margin-top: 2rem;">
       <div class="activity-card">
         <div class="activity-preview">
           ⛄
@@ -193,24 +202,6 @@
       </a>
     </div>
   </section>
-  
-  <script>
-    function showAnimation(type) {
-      // Hide all animations
-      document.querySelectorAll('.animation-wrapper').forEach(el => {
-        el.style.display = 'none';
-      });
-      
-      // Show selected animation
-      document.getElementById('anim-' + type).style.display = 'block';
-      
-      // Update button states
-      document.querySelectorAll('.tab-btn').forEach(btn => {
-        btn.classList.remove('active');
-      });
-      event.target.classList.add('active');
-    }
-  </script>
 
   <!-- Stats Section -->
   <section class="section">
