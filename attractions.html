@@ -13,42 +13,6 @@
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    .svg-preview {
-      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.1));
-      border: 2px dashed rgba(125, 211, 252, 0.3);
-      border-radius: 16px;
-      padding: 3rem;
-      text-align: center;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-    }
-    .svg-preview:hover {
-      border-color: rgba(125, 211, 252, 0.6);
-      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15));
-    }
-    .svg-preview-icon {
-      font-size: 5rem;
-      margin-bottom: 1rem;
-    }
-    .view-animation-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      background: linear-gradient(135deg, #0ea5e9, #0284c7);
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      margin-top: 1rem;
-    }
-    .view-animation-btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
-    }
-  </style>
 </head>
 <body>
   <!-- Snow Effect Container -->
@@ -89,7 +53,7 @@
       
       <p class="hero-subtitle">
         精心设计的冰雪活动，带给您刺激与欢乐并存的体验<br>
-        点击下方查看精彩动画演示
+        点击下方标签切换查看精彩动画演示
       </p>
     </div>
   </section>
@@ -105,20 +69,18 @@
     <!-- Snowman Activity -->
     <div id="snowman" class="tab-content active">
       <div class="container">
-        <div class="svg-preview">
-          <div class="svg-preview-icon">⛄</div>
-          <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">雪人制作工坊</h3>
-          <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+        <!-- Animation Display -->
+        <div style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+          <iframe src="activities/snowman-making.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+        </div>
+        
+        <div class="about-content">
+          <h3>⛄ 雪人制作工坊</h3>
+          <p>
             亲手堆砌属于自己的雪人，体验冰雪创作的乐趣。孩子们可以发挥想象力，
             为雪人装饰帽子、围巾、纽扣，创造独一无二的冰雪作品。
           </p>
-          <a href="activities/snowman-making.html" target="_blank" class="view-animation-btn">
-            <span>🎬</span>
-            <span>观看动画演示</span>
-          </a>
-        </div>
-        
-        <div class="about-content" style="margin-top: 2rem;">
+          
           <h3>项目介绍</h3>
           <p>
             雪人制作是春江冰雪乐园最受欢迎的亲子活动之一。我们提供专业的雪堆和丰富的装饰道具，
@@ -148,20 +110,18 @@
     <!-- Ice Paradise Activity -->
     <div id="ice" class="tab-content" style="display: none;">
       <div class="container">
-        <div class="svg-preview">
-          <div class="svg-preview-icon">⛸️</div>
-          <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">冰上乐园</h3>
-          <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+        <!-- Animation Display -->
+        <div style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+          <iframe src="activities/ice-paradise-animation.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+        </div>
+        
+        <div class="about-content">
+          <h3>⛸️ 冰上乐园</h3>
+          <p>
             1800平方米国际标准冰场，配备专业制冰设备。无论您是滑冰新手还是专业选手，
             都能在这里找到属于自己的舞台，感受冰上飞舞的优雅与激情。
           </p>
-          <a href="activities/ice-paradise-animation.html" target="_blank" class="view-animation-btn">
-            <span>🎬</span>
-            <span>观看动画演示</span>
-          </a>
-        </div>
-        
-        <div class="about-content" style="margin-top: 2rem;">
+          
           <h3>冰场设施</h3>
           <p>
             我们的冰上乐园采用国际标准制冰技术，冰面平整光滑，质量一流。
@@ -191,20 +151,18 @@
     <!-- Snow Tube Activity -->
     <div id="tube" class="tab-content" style="display: none;">
       <div class="container">
-        <div class="svg-preview">
-          <div class="svg-preview-icon">🛷</div>
-          <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">雪圈滑道</h3>
-          <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+        <!-- Animation Display -->
+        <div style="background: rgba(0,0,0,0.3); border-radius: 20px; overflow: hidden; border: 1px solid rgba(125, 211, 252, 0.3); box-shadow: 0 10px 40px rgba(0,0,0,0.3); margin-bottom: 2rem;">
+          <iframe src="activities/snow-tube-slide.html" style="width: 100%; height: 520px; border: none; display: block;"></iframe>
+        </div>
+        
+        <div class="about-content">
+          <h3>🛷 雪圈滑道</h3>
+          <p>
             300米超长滑道，设计独特的弯道和坡度。乘着雪圈飞速俯冲，
             感受风驰电掣的刺激，尖叫与欢笑同在！支持多人同乐，一起享受速度的快感。
           </p>
-          <a href="activities/snow-tube-slide.html" target="_blank" class="view-animation-btn">
-            <span>🎬</span>
-            <span>观看动画演示</span>
-          </a>
-        </div>
-        
-        <div class="about-content" style="margin-top: 2rem;">
+          
           <h3>滑道设计</h3>
           <p>
             雪圈滑道全长300米，设计了多个弯道和不同坡度的路段，
