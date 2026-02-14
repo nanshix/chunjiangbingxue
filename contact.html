@@ -173,7 +173,6 @@
             <span>打开导航</span>
           </a>
         </div>
-      </div>
     </div>
   </section>
 
@@ -221,36 +220,27 @@
 
   <!-- Social Media -->
   <section class="section">
-    <div class="container">
+    <div class="container" style="text-align: center;">
       <div class="section-header">
         <span class="section-tag">关注我们</span>
         <h2>获取最新资讯</h2>
         <p>关注我们的社交媒体账号，获取最新活动信息和优惠</p>
       </div>
       
-      <div class="social-text-links" style="max-width: 600px; margin: 0 auto; background: rgba(255,255,255,0.05); border-radius: 20px; padding: 2rem; border: 1px solid rgba(125, 211, 252, 0.2);">
-        <h4 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1.5rem; text-align: center;">官方账号</h4>
-        <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(125, 211, 252, 0.2); transition: all 0.3s ease;" onclick="event.preventDefault(); showNotification('微信公众号：春江冰雪乐园', 'info')">
-          <span style="margin-right: 0.5rem;">💬</span> 微信公众平台
+      <div class="hero-cta" style="justify-content: center;">
+        <a href="#" class="btn btn-primary" onclick="event.preventDefault(); showNotification('微信公众号：春江冰雪乐园', 'info')">
+          <span>📱</span>
+          <span>微信公众号</span>
         </a>
-        <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(125, 211, 252, 0.2); transition: all 0.3s ease;" onclick="event.preventDefault(); showNotification('抖音号：春江冰雪乐园', 'info')">
-          <span style="margin-right: 0.5rem;">🎵</span> 抖音官方账号
+        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('微博：@春江冰雪乐园', 'info')">
+          <span>📝</span>
+          <span>官方微博</span>
         </a>
-        <a href="#" style="color: rgba(255,255,255,0.8); text-decoration: none; display: block; padding: 0.75rem 0; transition: all 0.3s ease;" onclick="event.preventDefault(); showNotification('小红书：春江冰雪乐园', 'info')">
-          <span style="margin-right: 0.5rem;">📕</span> 小红书分享
+        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('抖音：春江冰雪乐园', 'info')">
+          <span>🎵</span>
+          <span>抖音账号</span>
         </a>
       </div>
-      
-      <style>
-        .social-text-links a:hover {
-          color: var(--ice-blue);
-          transform: translateX(10px);
-          padding-left: 10px;
-        }
-        .social-text-links a {
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-      </style>
     </div>
   </section>
 
@@ -260,12 +250,11 @@
       <div class="footer-section">
         <h4>春江冰雪乐园</h4>
         <p>哈尔滨尚志市最具影响力的冰雪主题乐园，为游客提供专业、安全、欢乐的冰雪体验。</p>
-        <div class="social-links">
-          <a href="#" title="微信">📱</a>
-          <a href="#" title="微博">📝</a>
-          <a href="#" title="抖音">🎵</a>
+        <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1rem;">关注我们</h4>
+        <a href="#"><span style="margin-right: 0.5rem;">💬</span>微信公众平台</a>
+        <a href="#"><span style="margin-right: 0.5rem;">🎵</span>抖音官方账号</a>
+        <a href="#"><span style="margin-right: 0.5rem;">📕</span>小红书分享</a>
         </div>
-      </div>
       
       <div class="footer-section">
         <h4>快速链接</h4>
