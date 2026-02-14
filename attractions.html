@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>游乐项目 - 春江冰雪乐园</title>
+  <meta name="description" content="探索春江冰雪乐园的精彩游乐项目：雪人制作、冰上乐园、雪圈滑道等，带给您难忘的冰雪体验。">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .svg-preview {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.1));
+      border: 2px dashed rgba(125, 211, 252, 0.3);
+      border-radius: 16px;
+      padding: 3rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      transition: all 0.3s ease;
+    }
+    .svg-preview:hover {
+      border-color: rgba(125, 211, 252, 0.6);
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.15));
+    }
+    .svg-preview-icon {
+      font-size: 5rem;
+      margin-bottom: 1rem;
+    }
+    .view-animation-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: linear-gradient(135deg, #0ea5e9, #0284c7);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      margin-top: 1rem;
+    }
+    .view-animation-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(14, 165, 233, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <!-- Snow Effect Container -->
+  <div class="snowflakes" id="snowflakes"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">❄️</span>
+        <span class="logo-text">春江冰雪乐园</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于乐园</a></li>
+        <li><a href="attractions.html" class="active">游乐项目</a></li>
+        <li><a href="gallery.html">精彩瞬间</a></li>
+        <li><a href="tickets.html">门票预订</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+        <li><a href="tickets.html" class="nav-cta">立即预订</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 60vh; padding-top: 7rem;">
+    <div class="aurora"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>🎿</span>
+        <span>精彩项目</span>
+      </div>
+      
+      <h1>探索<span>游乐项目</span></h1>
+      
+      <p class="hero-subtitle">
+        精心设计的冰雪活动，带给您刺激与欢乐并存的体验<br>
+        点击下方查看精彩动画演示
+      </p>
+    </div>
+  </section>
+
+  <!-- Activity Tabs -->
+  <section class="section">
+    <div class="activity-tabs">
+      <button class="tab-btn active" data-tab="snowman">⛄ 雪人制作</button>
+      <button class="tab-btn" data-tab="ice">⛸️ 冰上乐园</button>
+      <button class="tab-btn" data-tab="tube">🛷 雪圈滑道</button>
+    </div>
+
+    <!-- Snowman Activity -->
+    <div id="snowman" class="tab-content active">
+      <div class="container">
+        <div class="svg-preview">
+          <div class="svg-preview-icon">⛄</div>
+          <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">雪人制作工坊</h3>
+          <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+            亲手堆砌属于自己的雪人，体验冰雪创作的乐趣。孩子们可以发挥想象力，
+            为雪人装饰帽子、围巾、纽扣，创造独一无二的冰雪作品。
+          </p>
+          <a href="activities/snowman-making.html" target="_blank" class="view-animation-btn">
+            <span>🎬</span>
+            <span>观看动画演示</span>
+          </a>
+        </div>
+        
+        <div class="about-content" style="margin-top: 2rem;">
+          <h3>项目介绍</h3>
+          <p>
+            雪人制作是春江冰雪乐园最受欢迎的亲子活动之一。我们提供专业的雪堆和丰富的装饰道具，
+            包括各种颜色的帽子、围巾、纽扣、胡萝卜鼻子等。孩子们可以在家长的陪伴下，
+            学习如何堆雪人，了解雪的特性，培养动手能力和创造力。
+          </p>
+          
+          <h3>适合人群</h3>
+          <p>
+            • 3岁以上儿童（需家长陪同）<br>
+            • 亲子家庭<br>
+            • 学校团体活动<br>
+            • 企业团建
+          </p>
+          
+          <h3>项目亮点</h3>
+          <p>
+            ✨ 专业指导：现场工作人员会教授堆雪人的技巧<br>
+            ✨ 道具齐全：提供各种装饰道具，让雪人更生动<br>
+            ✨ 拍照留念：设置专门的拍照区域，记录美好瞬间<br>
+            ✨ 创意比赛：定期举办雪人创意大赛，赢取奖品
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ice Paradise Activity -->
+    <div id="ice" class="tab-content" style="display: none;">
+      <div class="container">
+        <div class="svg-preview">
+          <div class="svg-preview-icon">⛸️</div>
+          <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">冰上乐园</h3>
+          <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+            1800平方米国际标准冰场，配备专业制冰设备。无论您是滑冰新手还是专业选手，
+            都能在这里找到属于自己的舞台，感受冰上飞舞的优雅与激情。
+          </p>
+          <a href="activities/ice-paradise-animation.html" target="_blank" class="view-animation-btn">
+            <span>🎬</span>
+            <span>观看动画演示</span>
+          </a>
+        </div>
+        
+        <div class="about-content" style="margin-top: 2rem;">
+          <h3>冰场设施</h3>
+          <p>
+            我们的冰上乐园采用国际标准制冰技术，冰面平整光滑，质量一流。
+            冰场分为多个区域：初学者区、自由滑行区、花样滑冰区、冰球体验区，
+            满足不同水平和需求的游客。
+          </p>
+          
+          <h3>专业教练</h3>
+          <p>
+            乐园拥有50余名专业教练，均持有国家认证的教练资格证书。
+            提供一对一私教课程和团体教学，无论您是想学习基础滑行，
+            还是提升花样滑冰技巧，我们都能为您提供专业指导。
+          </p>
+          
+          <h3>服务设施</h3>
+          <p>
+            🎿 免费提供冰鞋租赁（多种尺码可选）<br>
+            🎿 专业护具租赁（头盔、护膝、护肘）<br>
+            🎿 更衣室和储物柜<br>
+            🎿 休息区和观景平台<br>
+            🎿 冰场咖啡厅，提供热饮和小食
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Snow Tube Activity -->
+    <div id="tube" class="tab-content" style="display: none;">
+      <div class="container">
+        <div class="svg-preview">
+          <div class="svg-preview-icon">🛷</div>
+          <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">雪圈滑道</h3>
+          <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto;">
+            300米超长滑道，设计独特的弯道和坡度。乘着雪圈飞速俯冲，
+            感受风驰电掣的刺激，尖叫与欢笑同在！支持多人同乐，一起享受速度的快感。
+          </p>
+          <a href="activities/snow-tube-slide.html" target="_blank" class="view-animation-btn">
+            <span>🎬</span>
+            <span>观看动画演示</span>
+          </a>
+        </div>
+        
+        <div class="about-content" style="margin-top: 2rem;">
+          <h3>滑道设计</h3>
+          <p>
+            雪圈滑道全长300米，设计了多个弯道和不同坡度的路段，
+            让您体验从缓到急的速度变化。起点设有专业出发平台，
+            终点有安全缓冲区和减速带，确保滑行安全。
+          </p>
+          
+          <h3>安全保障</h3>
+          <p>
+            安全是我们的首要考虑。所有雪圈均采用加厚材质制作，配有安全扶手。
+            滑道两侧设有防护网，每个弯道都有工作人员值守。
+            游客在滑行前会接受简短的安全指导。
+          </p>
+          
+          <h3>玩法多样</h3>
+          <p>
+            🎯 单人滑行：独自享受速度与激情<br>
+            🎯 双人同滑：与朋友或家人一起体验<br>
+            🎯 团队接力：组织团队比赛，增加趣味性<br>
+            🎯 夜间滑行：夜晚灯光下的别样体验
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- More Activities -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">更多精彩</span>
+      <h2>其他游乐项目</h2>
+      <p>除了三大招牌项目，我们还有更多精彩内容等您探索</p>
+    </div>
+    
+    <div class="activities-grid">
+      <div class="activity-card">
+        <div class="activity-preview">
+          🎿
+        </div>
+        <div class="activity-content">
+          <h3>滑雪体验</h3>
+          <p>专业滑雪道，适合不同水平的滑雪爱好者，配备完整教学体系。</p>
+        </div>
+      </div>
+      
+      <div class="activity-card">
+        <div class="activity-preview">
+          🏂
+        </div>
+        <div class="activity-content">
+          <h3>单板滑雪</h3>
+          <p>单板滑雪专区，潮流运动体验，专业教练一对一指导。</p>
+        </div>
+      </div>
+      
+      <div class="activity-card">
+        <div class="activity-preview">
+          🛷
+        </div>
+        <div class="activity-content">
+          <h3>雪地摩托</h3>
+          <p>驾驶雪地摩托在雪原上驰骋，感受不一样的冬季运动魅力。</p>
+        </div>
+      </div>
+      
+      <div class="activity-card">
+        <div class="activity-preview">
+          🎣
+        </div>
+        <div class="activity-content">
+          <h3>冰钓体验</h3>
+          <p>在安全冰面上体验传统冰钓，享受冬日宁静时光。</p>
+        </div>
+      </div>
+      
+      <div class="activity-card">
+        <div class="activity-preview">
+          🏰
+        </div>
+        <div class="activity-content">
+          <h3>冰雕观赏</h3>
+          <p>欣赏专业艺术家创作的精美冰雕作品，拍照打卡绝佳地点。</p>
+        </div>
+      </div>
+      
+      <div class="activity-card">
+        <div class="activity-preview">
+          ☕
+        </div>
+        <div class="activity-content">
+          <h3>冰雪咖啡厅</h3>
+          <p>玩累了来杯热饮，舒适的环境，美味的餐点，温暖您的身心。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>春江冰雪乐园</h4>
+        <p>哈尔滨尚志市最具影响力的冰雪主题乐园，为游客提供专业、安全、欢乐的冰雪体验。</p>
+        <div class="social-links">
+          <a href="#" title="微信">📱</a>
+          <a href="#" title="微博">📝</a>
+          <a href="#" title="抖音">🎵</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>快速链接</h4>
+        <a href="about.html">关于乐园</a>
+        <a href="attractions.html">游乐项目</a>
+        <a href="tickets.html">门票预订</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>联系方式</h4>
+        <p>📍 黑龙江省哈尔滨市尚志市</p>
+        <p>📞 400-XXX-XXXX</p>
+        <p>✉️ info@chunjiangbingxue.com</p>
+        <p>🕐 每日 9:00 - 21:00</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>游客服务</h4>
+        <a href="#">常见问题</a>
+        <a href="#">安全须知</a>
+        <a href="#">交通指南</a>
+        <a href="#">隐私政策</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 春江冰雪乐园 版权所有 | 让冰雪带来更多欢乐 ❄️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script>
+    // Tab functionality
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-tab');
+        
+        // Update buttons
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        // Update content
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.style.display = content.id === targetId ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>

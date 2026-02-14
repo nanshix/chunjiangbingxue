@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ice Park</title>
+<style>
+/* Background gradient (ice theme) */
+body {
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background:
+    radial-gradient(circle at 20% 30%, #9be7ff33, transparent 40%),
+    radial-gradient(circle at 80% 70%, #7b61ff33, transparent 40%),
+    linear-gradient(to bottom, #0b3d91, #001a33);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  padding-top: 20vh;
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px #9be7ff, 0 0 40px #7b61ff;
+}
+
+p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #9be7ff;
+  letter-spacing: 2px;
+}
+
+/* Simple snowflake animation */
+.snowflakes {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.snowflake {
+  position: absolute;
+  top: -20px;
+  color: #c8eeff;
+  font-size: 1.2em;
+  opacity: 0.7;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="snowflakes" id="snowflakes"></div>
+
+<h1>❄️ Ice Park</h1>
+<p>Welcome to the frozen wonderland</p>
+
+<script>
+  // Generate snowflakes
+  const container = document.getElementById('snowflakes');
+  const count = 40;
+  for (let i = 0; i < count; i++) {
+    const flake = document.createElement('div');
+    flake.classList.add('snowflake');
+    flake.textContent = ['❄', '❅', '❆', '·', '*'][Math.floor(Math.random() * 5)];
+    flake.style.left = Math.random() * 100 + 'vw';
+    flake.style.fontSize = (0.8 + Math.random() * 1.5) + 'em';
+    flake.style.animationDuration = (4 + Math.random() * 8) + 's';
+    flake.style.animationDelay = (Math.random() * 8) + 's';
+    flake.style.opacity = 0.3 + Math.random() * 0.7;
+    container.appendChild(flake);
+  }
+</script>
+</body>
+</html>

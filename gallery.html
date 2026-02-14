@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>精彩瞬间 - 春江冰雪乐园</title>
+  <meta name="description" content="浏览春江冰雪乐园的精彩照片，感受游客们的欢乐时光，预览您的冰雪之旅。">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Snow Effect Container -->
+  <div class="snowflakes" id="snowflakes"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">❄️</span>
+        <span class="logo-text">春江冰雪乐园</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于乐园</a></li>
+        <li><a href="attractions.html">游乐项目</a></li>
+        <li><a href="gallery.html" class="active">精彩瞬间</a></li>
+        <li><a href="tickets.html">门票预订</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+        <li><a href="tickets.html" class="nav-cta">立即预订</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 60vh; padding-top: 7rem;">
+    <div class="aurora"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>📸</span>
+        <span>精彩瞬间</span>
+      </div>
+      
+      <h1>记录<span>欢乐时光</span></h1>
+      
+      <p class="hero-subtitle">
+        每一个笑容都是最美的风景<br>
+        每一张照片都是珍贵的回忆
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">照片画廊</span>
+      <h2>精彩照片集锦</h2>
+      <p>来自游客们的真实分享，点击照片查看大图</p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <div class="gallery-placeholder">⛄</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">⛸️</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">🛷</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">🎿</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">👨‍👩‍👧‍👦</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">🏔️</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">❄️</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">🎉</div>
+      </div>
+      <div class="gallery-item">
+        <div class="gallery-placeholder">☃️</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">视频展示</span>
+      <h2>精彩视频</h2>
+      <p>通过视频感受春江冰雪乐园的魅力</p>
+    </div>
+    
+    <div class="container">
+      <div class="about-content" style="text-align: center; padding: 4rem 2rem;">
+        <div style="font-size: 5rem; margin-bottom: 2rem;">🎬</div>
+        <h3 style="color: white; font-family: 'Noto Serif SC', serif; margin-bottom: 1rem;">
+          乐园宣传视频
+        </h3>
+        <p style="color: rgba(255,255,255,0.7); max-width: 600px; margin: 0 auto 2rem;">
+          通过这段视频，您将全面了解春江冰雪乐园的各个精彩项目，
+          感受游客们的欢声笑语，提前体验属于您的冰雪之旅。
+        </p>
+        <button class="btn btn-primary" onclick="showNotification('视频功能即将上线，敬请期待！', 'info')">
+          <span>▶️</span>
+          <span>播放视频</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">游客评价</span>
+      <h2>听听他们怎么说</h2>
+      <p>来自真实游客的分享与评价</p>
+    </div>
+    
+    <div class="activities-grid">
+      <div class="activity-card" style="text-align: center; padding: 2rem;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">👨‍👩‍👧</div>
+        <h3 style="color: white; margin-bottom: 1rem;">张先生一家</h3>
+        <p style="color: rgba(255,255,255,0.8); font-style: italic;">
+          "带孩子来玩了一整天，孩子们特别喜欢雪人工坊，自己动手做雪人，玩得不亦乐乎。
+          工作人员很耐心，安全措施也很到位，下次还会再来！"
+        </p>
+        <div style="margin-top: 1rem; color: #fbbf24;">⭐⭐⭐⭐⭐</div>
+      </div>
+      
+      <div class="activity-card" style="text-align: center; padding: 2rem;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">👫</div>
+        <h3 style="color: white; margin-bottom: 1rem;">李小姐 & 男友</h3>
+        <p style="color: rgba(255,255,255,0.8); font-style: italic;">
+          "冰上乐园太棒了！1800平的冰场真的很宽敞，而且冰面质量特别好。
+          我们租了冰鞋，玩了一下午，还拍了好多照片，非常浪漫！"
+        </p>
+        <div style="margin-top: 1rem; color: #fbbf24;">⭐⭐⭐⭐⭐</div>
+      </div>
+      
+      <div class="activity-card" style="text-align: center; padding: 2rem;">
+        <div style="font-size: 3rem; margin-bottom: 1rem;">🏢</div>
+        <h3 style="color: white; margin-bottom: 1rem;">某公司团建</h3>
+        <p style="color: rgba(255,255,255,0.8); font-style: italic;">
+          "公司组织团建活动选了这里，大家都玩疯了！特别是雪圈滑道，
+          300米的长度真的很刺激。下次团建还会考虑来这里！"
+        </p>
+        <div style="margin-top: 1rem; color: #fbbf24;">⭐⭐⭐⭐⭐</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Share Your Photos -->
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <div class="section-header">
+        <span class="section-tag">分享快乐</span>
+        <h2>分享您的精彩瞬间</h2>
+        <p>在社交媒体上分享您在春江冰雪乐园的快乐时光</p>
+      </div>
+      
+      <div class="hero-cta" style="justify-content: center;">
+        <a href="#" class="btn btn-primary" onclick="event.preventDefault(); showNotification('功能开发中，敬请期待！', 'info')">
+          <span>📱</span>
+          <span>上传照片</span>
+        </a>
+        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('功能开发中，敬请期待！', 'info')">
+          <span>#春江冰雪乐园</span>
+          <span>分享话题</span>
+        </a>
+      </div>
+      
+      <p style="color: rgba(255,255,255,0.6); margin-top: 2rem;">
+        在微信、微博、抖音等平台分享您的照片，添加话题 #春江冰雪乐园<br>
+        优秀作品将有机会在我们的官方账号展示！
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>春江冰雪乐园</h4>
+        <p>哈尔滨尚志市最具影响力的冰雪主题乐园，为游客提供专业、安全、欢乐的冰雪体验。</p>
+        <div class="social-links">
+          <a href="#" title="微信">📱</a>
+          <a href="#" title="微博">📝</a>
+          <a href="#" title="抖音">🎵</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>快速链接</h4>
+        <a href="about.html">关于乐园</a>
+        <a href="attractions.html">游乐项目</a>
+        <a href="tickets.html">门票预订</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>联系方式</h4>
+        <p>📍 黑龙江省哈尔滨市尚志市</p>
+        <p>📞 400-XXX-XXXX</p>
+        <p>✉️ info@chunjiangbingxue.com</p>
+        <p>🕐 每日 9:00 - 21:00</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>游客服务</h4>
+        <a href="#">常见问题</a>
+        <a href="#">安全须知</a>
+        <a href="#">交通指南</a>
+        <a href="#">隐私政策</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 春江冰雪乐园 版权所有 | 让冰雪带来更多欢乐 ❄️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

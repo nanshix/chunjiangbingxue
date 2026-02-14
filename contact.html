@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们 - 春江冰雪乐园</title>
+  <meta name="description" content="联系春江冰雪乐园，获取地址、电话、营业时间等信息。我们期待您的光临！">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Snow Effect Container -->
+  <div class="snowflakes" id="snowflakes"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">❄️</span>
+        <span class="logo-text">春江冰雪乐园</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于乐园</a></li>
+        <li><a href="attractions.html">游乐项目</a></li>
+        <li><a href="gallery.html">精彩瞬间</a></li>
+        <li><a href="tickets.html">门票预订</a></li>
+        <li><a href="contact.html" class="active">联系我们</a></li>
+        <li><a href="tickets.html" class="nav-cta">立即预订</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 60vh; padding-top: 7rem;">
+    <div class="aurora"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>📞</span>
+        <span>联系我们</span>
+      </div>
+      
+      <h1>随时<span>与我们联系</span></h1>
+      
+      <p class="hero-subtitle">
+        有任何问题或建议，欢迎随时联系我们<br>
+        我们期待为您提供最好的服务
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section">
+    <div class="contact-grid">
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <h3>联系方式</h3>
+        
+        <div class="contact-item">
+          <span class="icon">📍</span>
+          <div>
+            <h4>乐园地址</h4>
+            <p>黑龙江省哈尔滨市尚志市<br>春江路88号冰雪乐园</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <span class="icon">📞</span>
+          <div>
+            <h4>联系电话</h4>
+            <p>客服热线：400-XXX-XXXX<br>
+               团体预订：0451-XXXXXXXX<br>
+               投诉建议：0451-XXXXXXXX</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <span class="icon">✉️</span>
+          <div>
+            <h4>电子邮箱</h4>
+            <p>客服邮箱：service@chunjiangbingxue.com<br>
+               商务合作：business@chunjiangbingxue.com<br>
+               媒体联系：media@chunjiangbingxue.com</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <span class="icon">🕐</span>
+          <div>
+            <h4>营业时间</h4>
+            <p>平日：09:00 - 21:00<br>
+               周末：08:30 - 22:00<br>
+               节假日：08:00 - 22:00</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <span class="icon">🚗</span>
+          <div>
+            <h4>交通指南</h4>
+            <p>🚌 公交：乘坐XX路、XX路至春江冰雪乐园站<br>
+               🚗 自驾：导航搜索"春江冰雪乐园"<br>
+               🅿️ 停车：提供免费大型停车场</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contact Form -->
+      <div class="contact-form">
+        <h3 style="color: white; margin-bottom: 1.5rem; font-family: 'Noto Serif SC', serif;">在线咨询</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="name">您的姓名 *</label>
+            <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+          </div>
+          
+          <div class="form-group">
+            <label for="phone">联系电话 *</label>
+            <input type="tel" id="phone" name="phone" required placeholder="请输入您的手机号">
+          </div>
+          
+          <div class="form-group">
+            <label for="email">电子邮箱</label>
+            <input type="email" id="email" name="email" placeholder="请输入您的邮箱（选填）">
+          </div>
+          
+          <div class="form-group">
+            <label for="subject">咨询类型</label>
+            <input type="text" id="subject" name="subject" placeholder="如：门票咨询、团体预订、投诉建议等">
+          </div>
+          
+          <div class="form-group">
+            <label for="message">咨询内容 *</label>
+            <textarea id="message" name="message" rows="5" required placeholder="请详细描述您的问题或需求"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <span>📤</span>
+            <span>提交咨询</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">地理位置</span>
+      <h2>乐园位置</h2>
+      <p>欢迎莅临春江冰雪乐园</p>
+    </div>
+    
+    <div class="container">
+      <div class="about-content" style="padding: 0; overflow: hidden;">
+        <div style="background: linear-gradient(135deg, rgba(14, 165, 233, 0.1), rgba(99, 102, 241, 0.1)); 
+                    height: 400px; display: flex; align-items: center; justify-content: center; flex-direction: column;">
+          <div style="font-size: 5rem; margin-bottom: 1rem;">🗺️</div>
+          <h3 style="color: white; margin-bottom: 1rem;">春江冰雪乐园</h3>
+          <p style="color: rgba(255,255,255,0.7);">黑龙江省哈尔滨市尚志市春江路88号</p>
+          <a href="#" class="btn btn-primary" style="margin-top: 2rem;" 
+             onclick="event.preventDefault(); showNotification('地图导航功能即将上线，敬请期待！', 'info')">
+            <span>🧭</span>
+            <span>打开导航</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">常见问题</span>
+      <h2>游客常见问题</h2>
+      <p>快速找到您想要的答案</p>
+    </div>
+    
+    <div class="container">
+      <div class="about-content">
+        <h3>🎫 门票相关</h3>
+        <p><strong>Q: 门票包含哪些项目？</strong><br>
+           A: 基础门票包含入园和大部分游乐项目。部分特殊项目如VIP教练服务、餐饮服务需额外付费。</p>
+        
+        <p><strong>Q: 可以退票或改期吗？</strong><br>
+           A: 游玩日前1天可免费退改。游玩日当天不退不改。天气等不可抗力因素可全额退款。</p>
+        
+        <h3>👨‍👩‍👧‍👦 游玩相关</h3>
+        <p><strong>Q: 儿童需要买票吗？</strong><br>
+           A: 1.2米以下儿童免票（需成人陪同），1.2-1.4米可购儿童票或随家庭套票入园。</p>
+        
+        <p><strong>Q: 需要自带装备吗？</strong><br>
+           A: 乐园提供免费冰鞋租赁和基础护具。也可自带装备。建议自备手套、帽子等保暖物品。</p>
+        
+        <h3>🚗 交通相关</h3>
+        <p><strong>Q: 有停车场吗？</strong><br>
+           A: 是的，乐园提供免费大型停车场，可同时容纳500辆车。</p>
+        
+        <p><strong>Q: 可以乘坐公共交通吗？</strong><br>
+           A: 可以。乘坐XX路、XX路公交车至春江冰雪乐园站下车即可。</p>
+        
+        <h3>🍽️ 餐饮相关</h3>
+        <p><strong>Q: 乐园内有餐厅吗？</strong><br>
+           A: 有。冰雪咖啡厅提供各种热饮、简餐和小食。也可自带食物（需在指定区域食用）。</p>
+        
+        <h3>📸 拍照相关</h3>
+        <p><strong>Q: 可以拍照吗？</strong><br>
+           A: 当然可以！我们鼓励您记录美好瞬间。专业摄影服务可在入园处咨询。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Media -->
+  <section class="section">
+    <div class="container" style="text-align: center;">
+      <div class="section-header">
+        <span class="section-tag">关注我们</span>
+        <h2>获取最新资讯</h2>
+        <p>关注我们的社交媒体账号，获取最新活动信息和优惠</p>
+      </div>
+      
+      <div class="hero-cta" style="justify-content: center;">
+        <a href="#" class="btn btn-primary" onclick="event.preventDefault(); showNotification('微信公众号：春江冰雪乐园', 'info')">
+          <span>📱</span>
+          <span>微信公众号</span>
+        </a>
+        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('微博：@春江冰雪乐园', 'info')">
+          <span>📝</span>
+          <span>官方微博</span>
+        </a>
+        <a href="#" class="btn btn-secondary" onclick="event.preventDefault(); showNotification('抖音：春江冰雪乐园', 'info')">
+          <span>🎵</span>
+          <span>抖音账号</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>春江冰雪乐园</h4>
+        <p>哈尔滨尚志市最具影响力的冰雪主题乐园，为游客提供专业、安全、欢乐的冰雪体验。</p>
+        <div class="social-links">
+          <a href="#" title="微信">📱</a>
+          <a href="#" title="微博">📝</a>
+          <a href="#" title="抖音">🎵</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>快速链接</h4>
+        <a href="about.html">关于乐园</a>
+        <a href="attractions.html">游乐项目</a>
+        <a href="tickets.html">门票预订</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>联系方式</h4>
+        <p>📍 黑龙江省哈尔滨市尚志市</p>
+        <p>📞 400-XXX-XXXX</p>
+        <p>✉️ info@chunjiangbingxue.com</p>
+        <p>🕐 每日 9:00 - 21:00</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>游客服务</h4>
+        <a href="#">常见问题</a>
+        <a href="#">安全须知</a>
+        <a href="#">交通指南</a>
+        <a href="#">隐私政策</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 春江冰雪乐园 版权所有 | 让冰雪带来更多欢乐 ❄️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

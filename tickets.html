@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>门票预订 - 春江冰雪乐园</title>
+  <meta name="description" content="预订春江冰雪乐园门票，享受早鸟优惠和套票折扣。多种票型选择，满足不同需求。">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;700;900&display=swap" rel="stylesheet">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Snow Effect Container -->
+  <div class="snowflakes" id="snowflakes"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <span class="logo-icon">❄️</span>
+        <span class="logo-text">春江冰雪乐园</span>
+      </a>
+      
+      <ul class="nav-links">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="about.html">关于乐园</a></li>
+        <li><a href="attractions.html">游乐项目</a></li>
+        <li><a href="gallery.html">精彩瞬间</a></li>
+        <li><a href="tickets.html" class="active">门票预订</a></li>
+        <li><a href="contact.html">联系我们</a></li>
+        <li><a href="tickets.html" class="nav-cta">立即预订</a></li>
+      </ul>
+      
+      <button class="mobile-menu-btn">☰</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" style="min-height: 60vh; padding-top: 7rem;">
+    <div class="aurora"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>🎫</span>
+        <span>门票预订</span>
+      </div>
+      
+      <h1>预订<span>您的门票</span></h1>
+      
+      <p class="hero-subtitle">
+        提前预订享受优惠价格<br>
+        多种票型满足不同需求
+      </p>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">门票价格</span>
+      <h2>选择适合您的票型</h2>
+      <p>早鸟预订享受8折优惠，套票更加划算</p>
+    </div>
+    
+    <div class="pricing-grid">
+      <!-- Basic Ticket -->
+      <div class="pricing-card">
+        <h3>单人票</h3>
+        <div class="price">
+          ¥128<span>/人</span>
+        </div>
+        <ul class="pricing-features">
+          <li>包含入园门票</li>
+          <li>不限时游玩</li>
+          <li>免费储物柜</li>
+          <li>基础保险</li>
+        </ul>
+        <button class="btn btn-secondary" style="width: 100%;" onclick="showNotification('预订功能开发中，敬请期待！', 'info')">
+          立即预订
+        </button>
+      </div>
+      
+      <!-- Family Ticket - Featured -->
+      <div class="pricing-card featured">
+        <h3>家庭套票</h3>
+        <div class="price">
+          ¥298<span>/套</span>
+        </div>
+        <ul class="pricing-features">
+          <li>2大1小入园（儿童1.4米以下）</li>
+          <li>不限时游玩</li>
+          <li>免费储物柜</li>
+          <li>雪人制作体验券</li>
+          <li>VIP快速通道</li>
+          <li>全家保险</li>
+        </ul>
+        <button class="btn btn-primary" style="width: 100%;" onclick="showNotification('预订功能开发中，敬请期待！', 'info')">
+          立即预订
+        </button>
+      </div>
+      
+      <!-- VIP Ticket -->
+      <div class="pricing-card">
+        <h3>VIP通票</h3>
+        <div class="price">
+          ¥388<span>/人</span>
+        </div>
+        <ul class="pricing-features">
+          <li>单人入园</li>
+          <li>不限时游玩</li>
+          <li>独立储物柜</li>
+          <li>所有项目畅玩</li>
+          <li>VIP快速通道</li>
+          <li>专属教练1小时</li>
+          <li>冰雪咖啡厅饮品</li>
+        </ul>
+        <button class="btn btn-secondary" style="width: 100%;" onclick="showNotification('预订功能开发中，敬请期待！', 'info')">
+          立即预订
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Group Booking -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">团体预订</span>
+      <h2>团体优惠政策</h2>
+      <p>10人以上团体享受额外折扣</p>
+    </div>
+    
+    <div class="container">
+      <div class="about-content">
+        <h3>👥 团体票优惠</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">10-19人</span>
+            <span class="stat-label">9折优惠</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">20-49人</span>
+            <span class="stat-label">85折优惠</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50人以上</span>
+            <span class="stat-label">8折优惠</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100人以上</span>
+            <span class="stat-label">专属定制</span>
+          </div>
+        </div>
+        
+        <h3>🎁 团体专享福利</h3>
+        <p>
+          • 免费团体合影留念<br>
+          • 专属导游讲解服务<br>
+          • 优先安排餐饮座位<br>
+          • 赠送团体纪念品<br>
+          • 专属大巴停车区
+        </p>
+        
+        <div style="text-align: center; margin-top: 2rem;">
+          <a href="contact.html" class="btn btn-primary">
+            <span>📞</span>
+            <span>联系团体预订</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Opening Hours -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-tag">营业时间</span>
+      <h2>开放时间表</h2>
+      <p>全年运营，节假日正常营业</p>
+    </div>
+    
+    <div class="container">
+      <div class="about-content">
+        <div class="stats-grid" style="background: transparent; padding: 0;">
+          <div class="stat-item">
+            <span class="stat-number">平日</span>
+            <span class="stat-label">09:00 - 21:00</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">周末</span>
+            <span class="stat-label">08:30 - 22:00</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">节假日</span>
+            <span class="stat-label">08:00 - 22:00</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">夜场</span>
+            <span class="stat-label">18:00 - 22:00</span>
+          </div>
+        </div>
+        
+        <p style="text-align: center; color: rgba(255,255,255,0.7); margin-top: 2rem;">
+          💡 提示：建议提前预订，特别是周末和节假日，以确保有充足的游玩时间
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Notice -->
+  <section class="section">
+    <div class="container">
+      <div class="about-content">
+        <h3>📋 预订须知</h3>
+        
+        <h4>购票须知</h4>
+        <p>
+          • 门票当日有效，出园后再次入园需重新购票<br>
+          • 1.2米以下儿童免票（需至少1名成人陪同）<br>
+          • 1.2米-1.4米儿童可购买儿童票或随家庭套票入园<br>
+          • 65岁以上老人凭有效证件享受半价优惠<br>
+          • 现役军人、残疾人凭有效证件享受半价优惠
+        </p>
+        
+        <h4>退改政策</h4>
+        <p>
+          • 游玩日前1天可免费退改<br>
+          • 游玩日当天不退不改<br>
+          • 因天气等不可抗力因素闭园，可全额退款或改期<br>
+          • 团体预订退改政策请咨询客服
+        </p>
+        
+        <h4>温馨提示</h4>
+        <p>
+          • 建议穿着保暖衣物，佩戴手套、帽子<br>
+          • 乐园提供免费寄存服务<br>
+          • 请遵守各项安全规定，听从工作人员指引<br>
+          • 部分项目有身高、体重限制，请提前了解
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>春江冰雪乐园</h4>
+        <p>哈尔滨尚志市最具影响力的冰雪主题乐园，为游客提供专业、安全、欢乐的冰雪体验。</p>
+        <div class="social-links">
+          <a href="#" title="微信">📱</a>
+          <a href="#" title="微博">📝</a>
+          <a href="#" title="抖音">🎵</a>
+        </div>
+      </div>
+      
+      <div class="footer-section">
+        <h4>快速链接</h4>
+        <a href="about.html">关于乐园</a>
+        <a href="attractions.html">游乐项目</a>
+        <a href="tickets.html">门票预订</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+      
+      <div class="footer-section">
+        <h4>联系方式</h4>
+        <p>📍 黑龙江省哈尔滨市尚志市</p>
+        <p>📞 400-XXX-XXXX</p>
+        <p>✉️ info@chunjiangbingxue.com</p>
+        <p>🕐 每日 9:00 - 21:00</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>游客服务</h4>
+        <a href="#">常见问题</a>
+        <a href="#">安全须知</a>
+        <a href="#">交通指南</a>
+        <a href="#">隐私政策</a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>© 2026 春江冰雪乐园 版权所有 | 让冰雪带来更多欢乐 ❄️</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>
