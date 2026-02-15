@@ -146,9 +146,6 @@ function initActivityTabs() {
 // SCROLL ANIMATIONS
 // ============================================
 function initScrollAnimations() {
-  // Disable scroll animations on mobile for better performance
-  if (window.innerWidth <= 768) return;
-
   const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -286,12 +283,9 @@ function initSmoothScroll() {
 }
 
 // ============================================
-// PARALLAX EFFECT (Desktop only for performance)
+// PARALLAX EFFECT
 // ============================================
 function initParallax() {
-  // Disable parallax on mobile for better performance
-  if (window.innerWidth <= 768) return;
-  
   const hero = document.querySelector('.hero');
   if (!hero) return;
 
