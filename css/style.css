@@ -284,8 +284,7 @@ body {
   background-clip: text;
 }
 
-/* Hero Title - 冰雪奇境 */
-.hero-title {
+.hero h1.hero-title {
   font-family: 'Noto Serif SC', serif;
   font-size: clamp(4rem, 15vw, 10rem);
   font-weight: 900;
