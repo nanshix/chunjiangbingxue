@@ -13,9 +13,7 @@ function initSnowfall() {
   // Clear existing snowflakes
   container.innerHTML = '';
 
-  // Reduce snowflakes on mobile for better performance
-  const isMobile = window.innerWidth <= 768;
-  const count = isMobile ? 15 : 40; // Fewer snowflakes on mobile
+  const count = 40; // Number of snowflakes
   const symbols = ['❄', '❅', '❆', '·', '*', '•'];
 
   for (let i = 0; i < count; i++) {
@@ -409,19 +407,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // initLoader();
 });
 
-// Handle resize - but only reinitialize snow on actual width changes
-// (Mobile browsers trigger resize when URL bar shows/hides, causing refresh loops)
-let lastWidth = window.innerWidth;
+// Handle resize
 let resizeTimer;
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer);
   resizeTimer = setTimeout(() => {
-    // Only reinitialize if width actually changed significantly
-    const newWidth = window.innerWidth;
-    if (Math.abs(newWidth - lastWidth) > 50) {
-      initSnowfall();
-      lastWidth = newWidth;
-    }
+    initSnowfall();
   }, 250);
 });
 
