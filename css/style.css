@@ -244,13 +244,13 @@ body {
 }
 
 .hero-content {
-  max-width: 1200px;
   width: 100%;
   z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 }
 
 .hero-badge {
